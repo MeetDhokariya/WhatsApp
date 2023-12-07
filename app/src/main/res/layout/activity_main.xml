@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
+    android:id="@+id/drawerLayout"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
    <LinearLayout
        android:layout_width="match_parent"
@@ -33,6 +38,7 @@
                />
 
            <ImageView
+               android:id="@+id/imgcamera"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/baseline_camera_alt_24"
@@ -41,6 +47,7 @@
                />
 
            <ImageView
+               android:id="@+id/imgsearch"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/baseline_search_24"
@@ -48,6 +55,7 @@
                android:layout_marginStart="30dp"/>
 
            <ImageView
+               android:id="@+id/imgmenu"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:src="@drawable/baseline_more_vert_24"
@@ -87,7 +95,7 @@
                android:textStyle="bold"
                android:layout_marginStart="60dp"/>
            <TextView
-               android:id="@+id/txtCall"
+               android:id="@+id/txtCalls"
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="Calls"
@@ -102,10 +110,86 @@
    </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/fragmentfram"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5">
 
-    </LinearLayout>
 
-</LinearLayout>
+
+    </LinearLayout>
+    </LinearLayout>
+    <com.google.android.material.navigation.NavigationView
+
+        android:id="@+id/navigationDrawer"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center"
+                android:background="#0B6A5F"
+                >
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:padding="20sp"
+                    android:src="@drawable/whatsapp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/txtSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Settings"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/txtCall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Call"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp"/>
+                <TextView
+                    android:id="@+id/txtGroup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Group"
+                    android:layout_margin="10dp"
+                    android:paddingLeft="10dp"
+                    android:textSize="20sp"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
