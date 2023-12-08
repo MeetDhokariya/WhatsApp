@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="Whatsapp">#075E54</color>
+    <color name="Wbackground">#FF042C29</color>
 </resources>
